@@ -12,6 +12,7 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using StudentManagementAPI.EntityFrameworkCore.DbSet;
 
 namespace StudentManagementAPI.EntityFrameworkCore;
 
@@ -76,11 +77,6 @@ public class StudentManagementAPIDbContext :
 
         /* Configure your own tables/entities inside here */
 
-        //builder.Entity<YourEntity>(b =>
-        //{
-        //    b.ToTable(StudentManagementAPIConsts.DbTablePrefix + "YourEntities", StudentManagementAPIConsts.DbSchema);
-        //    b.ConfigureByConvention(); //auto configure for the base class props
-        //    //...
-        //});
+        builder.ConfigureStudentManagementAPIDbSet();
     }
 }

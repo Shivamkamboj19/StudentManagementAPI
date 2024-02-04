@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace StudentManagementAPI;
+namespace StudentManagementAPI.AutoMappers;
 
 public class StudentManagementAPIApplicationAutoMapperProfile : Profile
 {
